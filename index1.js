@@ -46,7 +46,7 @@ sr.reveal(".footer-10", {
 
 // contador
 var tiempo = {};
-var clock = new Date("2021-06-28 11:10:00 pmecho "# TL-hoteles" >> README.md"); // Obtener la fecha y almacenar en clock
+var clock = new Date("2021-06-28 11:10:00"); // Obtener la fecha y almacenar en clock
 var intervalo = window.setInterval(mostrar_hora, 1); // Frecuencia de actualización
 var i = 0; // Esta variable me ayudará a definir los estados de intervalo
 
@@ -54,7 +54,7 @@ function mostrar_hora() {
     var now = new Date();
     // Inserta la hora almacenada en clock en el span con id hora
     tiempo.horas = document.getElementById('hora');
-    tiempo.horas.innerHTML = clock.getHours() - now.getHours();
+    tiempo.horas.innerHTML = clock.getHours() + 24 - now.getHours();
 
     // Inserta los minutos almacenados en clock en el span con id minuto
     tiempo.minuto = document.getElementById('minuto');
